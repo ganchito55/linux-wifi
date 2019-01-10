@@ -11,7 +11,7 @@ function informacionSistema {
     informacion "Creando el reporte del sistema"
 	lsb_release -a > $reporte
 	uname -r  -m  -o >> $reporte
-	sudo lspci | grep 802 >> $reporte
+	sudo lspci >> $reporte
     cat $reporte
     informacion "El reporte ha sido guardado en $reporte"
 }
